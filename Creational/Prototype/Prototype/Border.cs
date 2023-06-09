@@ -10,5 +10,11 @@ namespace Prototype
     {
         public string Color { get; set; }
         public string Size { get; set; }
+
+
+        public Border Clone()
+        {
+            return (Border)MemberwiseClone();
+        }
     }
 }

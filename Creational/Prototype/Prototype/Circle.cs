@@ -18,11 +18,13 @@ namespace Prototype
         {
             Circle cloneBase = (Circle)this.MemberwiseClone();
 
-            cloneBase.Border = new Border()
-            {
-                Size = Border.Size,
-                Color = Border.Color
-            };
+            cloneBase.Border = cloneBase.Border.Clone();
+
+            //cloneBase.Border = new Border()
+            //{
+            //    Size = Border.Size,
+            //    Color = Border.Color
+            //};
 
             return cloneBase;
         }
